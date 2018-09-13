@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -20,21 +22,30 @@ public class AuthontificationController implements Initializable {
     /* Start Login Part */
     @FXML
     private AnchorPane authontificationPane;
-    
+
     @FXML
     private JFXTextField usernameSignInField;
     @FXML
     private JFXPasswordField passwordSignInField;
-    
+
     private JFXSnackbar toastErrorMsg;
-    
+
     /* End Login Part */
-    
+
+    /* Start SignUp Part */
+
+    @FXML
+    private TextField usernameSignUpField, nRegistreComSignUpField;
+    @FXML
+    private PasswordField passwordSignUpField;
+
+    /* End SignUp Part */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         toastErrorMsg = new JFXSnackbar(authontificationPane);
     }
-    
+
     @FXML
     private void onSignIn() {
         if (usernameSignInField.getText().trim().isEmpty()) {
@@ -45,7 +56,7 @@ public class AuthontificationController implements Initializable {
             toastErrorMsg.show("Username not valid !", 1500);
             return;
         }
-        
+
 
         if (passwordSignInField.getText().trim().isEmpty()) {
             toastErrorMsg.show("Password is Empty !", 1500);
@@ -55,7 +66,7 @@ public class AuthontificationController implements Initializable {
             toastErrorMsg.show("Password not valid !", 1500);
             return;
         }
-        
+
         int status = new UserDao().checkUsernameAndPassword(usernameSignInField.getText().trim().toLowerCase(), passwordSignInField.getText().toLowerCase());
         switch (status) {
             case -1:
@@ -83,7 +94,39 @@ public class AuthontificationController implements Initializable {
                 stage.setY(20);
                 break;
         }
-        
+
+    }
+
+    @FXML
+    private void onRegister() {
+        if (usernameSignUpField.getText().trim().isEmpty()) {
+            toastErrorMsg.show("Username is Empty !", 1500);
+            return;
+        }
+        if (!usernameSignUpField.getText().trim().matches("[A-Za-z0-9_]{4,}")) {
+            toastErrorMsg.show("Username not valid !", 1500);
+            return;
+        }
+
+        if (nRegistreComSignUpField.getText().trim().isEmpty()) {
+            toastErrorMsg.show("N° Register Commercial is Empty !", 1500);
+            return;
+        }
+        if (!nRegistreComSignUpField.getText().trim().matches("[0-9]{4,}")) {
+            toastErrorMsg.show("N° Register Commercial not valid !", 1500);
+            return;
+        }
+
+        if (passwordSignUpField.getText().trim().isEmpty()) {
+            toastErrorMsg.show("Password is Empty !", 1500);
+            return;
+        }
+        if (passwordSignUpField.getText().trim().length() < 4) {
+            toastErrorMsg.show("Password not valid !", 1500);
+            return;
+        }
+
+
     }
 
 }
