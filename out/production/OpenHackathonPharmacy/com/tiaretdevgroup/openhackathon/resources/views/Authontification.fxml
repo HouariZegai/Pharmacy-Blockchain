@@ -32,7 +32,7 @@
             <Pane styleClass="pane-color" />
          </children>
       </StackPane>
-      <VBox alignment="TOP_CENTER" prefWidth="400.0" spacing="70.0">
+      <VBox alignment="TOP_CENTER" prefHeight="565.0" prefWidth="400.0" spacing="70.0">
          <children>
             <VBox alignment="CENTER">
                <children>
@@ -88,7 +88,7 @@
                        </padding>
                     </VBox>
                   </Tab>
-                  <Tab styleClass="tab-title" text="Sign up">
+                  <Tab disable="true" fx:id="signUpTab" styleClass="tab-title" text="Sign up">
                     <VBox alignment="TOP_CENTER" fillWidth="false" spacing="15.0" styleClass="bottom-root">
                        <children>
                           <Label styleClass="footer-title" text="Create a new account">
@@ -96,27 +96,22 @@
                                 <Insets />
                              </VBox.margin>
                           </Label>
-                          <TextField promptText="Your Name">
+                          <TextField fx:id="usernameSignUpField" promptText="Username">
                               <styleClass>
                                  <String fx:value="field-signup" />
                                  <String fx:value="h-w-item" />
                               </styleClass></TextField>
-                          <TextField promptText="Username">
+                          <TextField fx:id="nRegistreComSignUpField" promptText="N° Registre Commerce">
                               <styleClass>
                                  <String fx:value="field-signup" />
                                  <String fx:value="h-w-item" />
                               </styleClass></TextField>
-                          <TextField promptText="Email">
-                              <styleClass>
-                                 <String fx:value="field-signup" />
-                                 <String fx:value="h-w-item" />
-                              </styleClass></TextField>
-                          <PasswordField promptText="Password">
+                          <PasswordField fx:id="passwordSignUpField" promptText="Password">
                               <styleClass>
                                  <String fx:value="field-signup" />
                                  <String fx:value="h-w-item" />
                               </styleClass></PasswordField>
-                          <JFXButton buttonType="RAISED" text="Register">
+                          <JFXButton buttonType="RAISED" onAction="#onRegister" text="Register">
                               <styleClass>
                                  <String fx:value="btn" />
                                  <String fx:value="btn-signup" />
@@ -124,7 +119,7 @@
                               </styleClass></JFXButton>
                        </children>
                        <padding>
-                          <Insets bottom="20.0" top="20.0" />
+                          <Insets bottom="50.0" top="20.0" />
                        </padding>
                     </VBox>
                   </Tab>

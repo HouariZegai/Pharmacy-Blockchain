@@ -88,7 +88,7 @@
                        </padding>
                     </VBox>
                   </Tab>
-                  <Tab styleClass="tab-title" text="Sign up">
+                  <Tab disable="true" fx:id="signUpTab" styleClass="tab-title" text="Sign up">
                     <VBox alignment="TOP_CENTER" fillWidth="false" spacing="15.0" styleClass="bottom-root">
                        <children>
                           <Label styleClass="footer-title" text="Create a new account">

@@ -1,24 +1,32 @@
 package com.tiaretdevgroup.openhackathon.java.main;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+import org.json.JSONObject;
+
+import java.io.*;
+import java.net.InetAddress;
 
 public class Tester {
 
 
     public static void main(String[] args) {
-        Date date = new Date();
         try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            HttpResponse<JsonNode> v = Unirest.post("http://a4fa76c6.ngrok.io/api/pharmacy")
+                    .field("code", "1234")
+                    .field("ip", inetAddress.getHostAddress())
+                    .asJson();
+            JSONObject object = new JSONObject(v.getBody().toString());
+
+            File file = new File("C:\\App\\token.json");
+            FileOutputStream out = new FileOutputStream(file);
+            out.write(object.toString().getBytes());
+        } catch (UnirestException | IOException e) {
             e.printStackTrace();
         }
-        Date date2 = new Date();
-
-        System.out.println(date.getTime());
-        System.out.println(date2.getTime());
-
     }
 
 }

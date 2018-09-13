@@ -114,12 +114,12 @@ public class SellController implements Initializable {
         Date last = salesBlockChain.lastSales(identifierLbl.getText().trim(), codeSelected);
         if (last == null || isThreeMonth(last, new Date())) {
             salesBlockChain.mineBlock(new Sale(identifierLbl.getText().trim(), codeSelected, "123"));
+            BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(salesBlockChain, Constants.FILE_SALES);
         } else {
             toastErrorMsgProductPane.show("You bought recently the same product", 2000);
         }
 
 
-        BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(salesBlockChain, Constants.FILE_SALES);
     }
 
     private boolean isThreeMonth(Date last, Date date) {

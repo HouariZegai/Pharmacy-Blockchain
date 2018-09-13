@@ -4,14 +4,6 @@ import com.jfoenix.controls.JFXDialog;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import de.jensd.fx.glyphs.octicons.OctIconView;
-import java.io.IOException;
-import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
@@ -33,6 +25,15 @@ import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
+import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class SystemController implements Initializable {
 
     @FXML
@@ -49,10 +50,10 @@ public class SystemController implements Initializable {
     private VBox sellBox, tracBox, manageAccountBox;
 
     /* End Home Part */
-    
+
     @FXML // this pane using for the Dialog of about
     private StackPane rightPane;
-    
+
     private StackPane sellPane, tracPane;
     private VBox guidePane, manageAccountPane;
 
@@ -65,7 +66,7 @@ public class SystemController implements Initializable {
     private MaterialDesignIconView iconGuide, iconAbout;
     @FXML
     private OctIconView iconSell, iconTrac;
-    
+
     /* End Icon Option */
 
     public static JFXDialog aboutDialog; // this for show the about Dialog
@@ -167,7 +168,7 @@ public class SystemController implements Initializable {
     private void sellClicked() {
         try {
             sellPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml"));
-        } catch(IOException ioe) {
+        } catch (IOException ioe) {
             ioe.printStackTrace();
         }
 
