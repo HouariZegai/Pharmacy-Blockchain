@@ -61,5 +61,4 @@ public class Launcher extends Application {
 
         launch(args);
     }
-
 }

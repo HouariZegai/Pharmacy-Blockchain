@@ -22,10 +22,9 @@ import org.json.JSONObject;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 public class SellController implements Initializable {
 
@@ -58,6 +57,7 @@ public class SellController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         toastErrorMsgCheckPane = new JFXSnackbar(rightCheckPane);
         toastErrorMsgProductPane = new JFXSnackbar(rightSellPane);
+
     }
 
     @FXML
@@ -71,7 +71,6 @@ public class SellController implements Initializable {
         MaladyBlockChain maladyBlockChain = BlockchainFactory.INSTANCE.
                 readMaladyBlockChainFromJSONFile(Constants.FILE_MALADIES);
 
-
         if (maladyBlockChain.isPatientAMalady(identifierField.getText().trim())) {
             // receive JSON & inserted in views
             getJSONMedicament();
@@ -83,16 +82,7 @@ public class SellController implements Initializable {
             toastErrorMsgCheckPane.show("You are not sick !", 2000);
         }
 
-        //test code of malady
-        if (new MaladyBlockChain().isPatientAMalady("123456")) {
-            toastErrorMsgCheckPane.show("Identifier not valid !", 2000);
-            return;
-        } else {
-
-        }
         initMedicament();
-
-
     }
 
     @FXML
@@ -102,7 +92,7 @@ public class SellController implements Initializable {
             return;
         }
 
-        String medicamentSelected = comboMedicament.getSelectionModel().getSelectedItem().toString();
+        String medicamentSelected = comboMedicament.getSelectionModel().getSelectedItem();
         String codeSelected = null;
 
         for (String[] item : products) {
@@ -113,18 +103,23 @@ public class SellController implements Initializable {
         }
 
         SalesBlockChain salesBlockChain = BlockchainFactory.INSTANCE.readSalesBlockChainFromJSONFile(Constants.FILE_SALES);
-        if (codeSelected != null)
+        Date last = salesBlockChain.lastSales(identifierLbl.getText().trim(), codeSelected);
+        if (last == null || isThreeMonth(last, new Date())) {
             salesBlockChain.mineBlock(new Sale(identifierLbl.getText().trim(), codeSelected, "123"));
-
+        } else {
+            toastErrorMsgProductPane.show("You bought recently the same product", 2000);
+        }
 
         BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(salesBlockChain, Constants.FILE_SALES);
+    }
+
+    private boolean isThreeMonth(Date last, Date date) {
+        return date.getTime() - last.getTime() > 7776000000L;
     }
 
     private void initMedicament() {
 
     }
-
-    private Executor executor = Executors.newSingleThreadExecutor();
 
     private void getJSONMedicament() {
         String urls = HOST + "/api/client/" + identifierField.getText().trim() + "/product";
