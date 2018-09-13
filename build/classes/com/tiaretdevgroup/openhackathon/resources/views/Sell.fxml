@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 
 <StackPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SellController">
    <children>
@@ -60,34 +61,42 @@
                   <Insets left="20.0" top="20.0" />
                </padding>
             </VBox>
-            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="650.0" prefWidth="430.0" spacing="10.0" styleClass="box-info">
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="650.0" prefWidth="447.0" spacing="10.0" styleClass="box-info">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/iconMan.png" />
                      </image>
                   </ImageView>
+                  <Label fx:id="identifierLbl" text="432108">
+                     <styleClass>
+                        <String fx:value="txt-info" />
+                        <String fx:value="txt-info-identifier" />
+                     </styleClass>
+                  </Label>
+                  <Line endX="100.0" startX="-100.0" stroke="#d0d0d0" strokeWidth="1.5" />
                   <VBox alignment="TOP_CENTER" prefHeight="200.0">
                      <children>
-                        <Label text="432108">
-                           <styleClass>
-                              <String fx:value="txt-info" />
-                              <String fx:value="txt-info-identifier" />
-                           </styleClass>
-                        </Label>
-                        <Label styleClass="title-info" text="LastName ">
+                        <Label styleClass="title-info" text="FirstName">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
                         </Label>
-                        <Label styleClass="txt-info" text="Djamel" />
-                        <Label styleClass="title-info" text="FirstName" />
-                        <Label styleClass="txt-info" text="ZERROUKI" />
-                        <Label styleClass="title-info" text="Type Malade" />
-                        <Label styleClass="txt-info" text="None" />
+                        <Label fx:id="firstNameLbl" styleClass="txt-info" text="Djamel" />
+                        <Label styleClass="title-info" text="LastName ">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="lastNameLbl" styleClass="txt-info" text="ZERROUKI" />
+                        <Label styleClass="title-info" text="Type of Disease" />
+                        <Label fx:id="typeOfDiseaseLbl" styleClass="txt-info" text="None" />
                      </children>
                   </VBox>
                </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
             </VBox>
          </children>
       </HBox>

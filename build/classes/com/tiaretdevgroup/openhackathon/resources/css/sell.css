@@ -22,7 +22,7 @@
 }
 
 .box-info {
-    -fx-background-color: #ececec;
+    -fx-background-color: #FFF;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 20, 0, 0, 0);
 }
 
@@ -32,7 +32,7 @@
 }
 
 .txt-info {
-    -fx-font-size: 25px
+    -fx-font-size: 20px
 }
 
 .txt-info-identifier {

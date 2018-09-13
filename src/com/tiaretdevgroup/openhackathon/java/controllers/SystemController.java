@@ -2,7 +2,6 @@ package com.tiaretdevgroup.openhackathon.java.controllers;
 
 import com.jfoenix.controls.JFXDialog;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import de.jensd.fx.glyphs.icons525.Icons525View;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import de.jensd.fx.glyphs.octicons.OctIconView;
 import java.io.IOException;
@@ -117,7 +116,7 @@ public class SystemController implements Initializable {
             ft.setCycleCount(0);
             ft.setAutoReverse(true);
             ft.play();
-            imgSlider.setImage(new Image("com/houarizegai/learnsql/resources/images/slider/" + counter + ".png"));
+            imgSlider.setImage(new Image("com/tiaretdevgroup/openhackathon/resources/images/slider/" + counter + ".png"));
             if (++counter > NUMBER_IMAGE_SLIDER) {
                 counter = 1;
             }
@@ -184,8 +183,8 @@ public class SystemController implements Initializable {
 
     @FXML
     private void accountClicked() {
-        styleBox(3);
-        setNode(manageAccountPane);
+//        styleBox(3);
+//        setNode(manageAccountPane);
     }
 
     @FXML
