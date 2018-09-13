@@ -92,7 +92,6 @@ public class SystemController implements Initializable {
 
         // Load FXML in variable
         try {
-            sellPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml"));
             manageAccountPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/ManageAccount.fxml"));
             guidePane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Guide.fxml"));
             // load Dialog
@@ -166,6 +165,12 @@ public class SystemController implements Initializable {
 
     @FXML
     private void sellClicked() {
+        try {
+            sellPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml"));
+        } catch(IOException ioe) {
+            ioe.printStackTrace();
+        }
+
         styleBox(1);
         setNode(sellPane);
     }
