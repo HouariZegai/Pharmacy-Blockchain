@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="parent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="549.0" style="-fx-alignment: #0F0;" styleClass="parent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SystemController">
+   <children>
+      <VBox fx:id="sidebar" maxHeight="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" styleClass="white-pane">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" onMouseClicked="#expandSidebar" prefHeight="50.0" spacing="10.0" styleClass="sidebar-options">
+               <children>
+                  <FontAwesomeIconView glyphName="NAVICON" size="24" />
+               </children>
+            </HBox>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox fx:id="boxHome" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#homeClicked" prefHeight="50.0" spacing="15.0" styleClass="sidebar-options">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconHome" fill="#4a4949" glyphName="HOME" size="26" />
+                        <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" text="Home" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="boxSell" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sellClicked" prefHeight="50.0" spacing="15.0" styleClass="sidebar-options">
+                     <children>
+                        <OctIconView fx:id="iconSell" fill="#4a4949" glyphName="CLIPPY" size="28" />
+                        <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" text="Sell" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="boxTrac" alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#traceabilityClicked" prefHeight="50.0" spacing="15.0" styleClass="sidebar-options">
+                     <children>
+                        <OctIconView fx:id="iconTrac" fill="#4a4949" glyphName="GRAPH" size="24" />
+                        <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" text="Traceability" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="boxAccount" alignment="CENTER_LEFT" layoutX="10.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#accountClicked" prefHeight="50.0" spacing="15.0" styleClass="sidebar-options">
+                     <children>
+                        <FontAwesomeIconView fx:id="iconAccount" fill="#4a4949" glyphName="USERS" size="22" />
+                        <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" text="Manage Account" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#logoutClicked" prefHeight="50.0" spacing="15.0" styleClass="sidebar-options">
+                     <children>
+                        <FontAwesomeIconView fill="#4a4949" glyphName="POWER_OFF" size="24" />
+                        <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" text="Logout" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox fx:id="boxGuide" alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#guideClicked" spacing="10.0" styleClass="sidebar-options">
+               <children>
+                  <MaterialDesignIconView fx:id="iconGuide" glyphName="TELEVISION_GUIDE" size="25" />
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="249.0" text=" Guide">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="boxAbout" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#aboutClicked" styleClass="sidebar-options">
+               <children>
+                  <MaterialDesignIconView fx:id="iconAbout" glyphName="INFORMATION_OUTLINE" size="27" />
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="249.0" text="  About">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <StackPane fx:id="rightPane" prefWidth="800.0" HBox.hgrow="ALWAYS">
+         <children>
+            <AnchorPane fx:id="holderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #FFF;" />
+            <VBox fx:id="homePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="white-pane">
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" style="-fx-background-color: #F2F2F2;" VBox.vgrow="NEVER">
+                     <children>
+                        <Pane fx:id="paneSlider" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="900.0" styleClass="header-pane" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fx:id="imgSlider" fitHeight="300.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/slider/s.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="300.0" spacing="15.0">
+                                 <children>
+                                    <Label styleClass="title1" text="Welcome to MediRec Application">
+                                       <font>
+                                          <Font name="Calibri Light" size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <Label styleClass="title2" text="This Application helps you sell &amp; follow medicament manipulation">
+                                       <font>
+                                          <Font name="Calibri Light" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dateLabel" prefHeight="62.0" prefWidth="607.0" styleClass="title-date" text=" ">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" top="50.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="350.0" prefWidth="200.0" spacing="10.0" styleClass="white-pane" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="sellBox" alignment="TOP_CENTER" layoutX="612.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sellClicked" prefHeight="246.0" prefWidth="201.0" styleClass="cards">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icons/Folder-big.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="60.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icons/tick.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" styleClass="title-smaller" text="Sell" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Light" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="172.0" styleClass="content-little" text="You can Sell product at the time as you like" textFill="#747474" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Light" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="tracBox" alignment="TOP_CENTER" layoutX="382.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#traceabilityClicked" prefHeight="246.0" prefWidth="201.0" styleClass="cards">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icons/Heart-big.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="50.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icons/tick.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="116.0" styleClass="title-smaller" text="Traceability" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Light" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="155.0" styleClass="content-little" text="Follow medicament manipulation" textFill="#747474" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Light" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="manageAccountBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#accountClicked" prefHeight="246.0" prefWidth="201.0" styleClass="cards">
+                           <children>
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/icons/msn.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="166.0" styleClass="title-smaller" text="Manage Account" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Light" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="175.0" styleClass="content-little" text="Change username &amp; password of user account" textFill="#747474" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Light" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/main.css" />
+      <URL value="@../css/system.css" />
+   </stylesheets>
+</HBox>

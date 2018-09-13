@@ -1,0 +1,42 @@
+/* Start Title Header Style */
+
+.title-header {
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, #2196f3 50%);
+    -fx-font-family: Tahoma;
+    -fx-font-size: 36px;
+}
+
+/* End Title Header Style */
+
+/* Start Icon Close */
+    
+.icon-close:hover {
+    -fx-cursor: hand;
+    -fx-fill: #FF3D22
+}
+
+/* End Icon Close */
+
+/* Start Combo Box */
+
+.combo-smaller {
+    -fx-font-size: 16px
+}
+
+.combo-medium {
+    -fx-font-size: 18px
+}
+
+.combo-medium:hover {
+    -fx-cursor: hand
+}
+
+/* End Combo Box */
+
+/* Start Text Field */
+
+.field {
+    -fx-font-size: 18px
+}
+
+/* Start error label */
