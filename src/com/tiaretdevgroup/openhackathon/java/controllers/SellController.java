@@ -7,13 +7,6 @@ import blockchain.models.Sale;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
-
-import java.io.File;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
@@ -26,6 +19,13 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class SellController implements Initializable {
 
@@ -63,7 +63,7 @@ public class SellController implements Initializable {
     @FXML
     public void onCheck() {
 
-        if(identifierField.getText() == null || !identifierField.getText().matches("[0-9]")) {
+        if (identifierField.getText() == null || !identifierField.getText().matches("[0-9]")) {
             toastErrorMsgCheckPane.show("Identifier not valid !", 2000);
             return;
         }
@@ -72,7 +72,7 @@ public class SellController implements Initializable {
                 readMaladyBlockChainFromJSONFile(Constants.FILE_MALADIES);
 
 
-        if(maladyBlockChain.isPatientAMalady(identifierField.getText().trim())) {
+        if (maladyBlockChain.isPatientAMalady(identifierField.getText().trim())) {
             // receive JSON & inserted in views
             getJSONMedicament();
             getJSONProfile();
@@ -105,15 +105,16 @@ public class SellController implements Initializable {
         String medicamentSelected = comboMedicament.getSelectionModel().getSelectedItem().toString();
         String codeSelected = null;
 
-        for(String[] item : products) {
-            if(item[0].equals(medicamentSelected)) {
+        for (String[] item : products) {
+            if (item[0].equals(medicamentSelected)) {
                 codeSelected = item[1];
                 break;
             }
         }
 
         SalesBlockChain salesBlockChain = BlockchainFactory.INSTANCE.readSalesBlockChainFromJSONFile(Constants.FILE_SALES);
-        salesBlockChain.mineBlock(new Sale(identifierLbl.getText().trim(), codeSelected, "123"));
+        if (codeSelected != null)
+            salesBlockChain.mineBlock(new Sale(identifierLbl.getText().trim(), codeSelected, "123"));
 
 
         BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(salesBlockChain, Constants.FILE_SALES);
@@ -122,6 +123,8 @@ public class SellController implements Initializable {
     private void initMedicament() {
 
     }
+
+    private Executor executor = Executors.newSingleThreadExecutor();
 
     private void getJSONMedicament() {
         String urls = HOST + "/api/client/" + identifierField.getText().trim() + "/product";
@@ -139,7 +142,7 @@ public class SellController implements Initializable {
         products = new ArrayList<>();
         comboMedicament.getItems().clear();
 
-        for(int i = 0; i < arrayData.length(); i++) {
+        for (int i = 0; i < arrayData.length(); i++) {
             JSONObject object = arrayData.getJSONObject(i);
 
             String[] product = {object.getString("name"), object.getString("code")};
@@ -150,7 +153,7 @@ public class SellController implements Initializable {
     }
 
     private void getJSONProfile() {
-        String urls = HOST + "/api/client/" + identifierField.getText().trim()  ;
+        String urls = HOST + "/api/client/" + identifierField.getText().trim();
 
         String productsJSON = null;
         try {
@@ -163,7 +166,7 @@ public class SellController implements Initializable {
         JSONObject obj = new JSONObject(productsJSON);
         identifierLbl.setText(obj.getString("identifier"));
         firstNameLbl.setText(obj.getString("firstname"));
-        lastNameLbl.setText( obj.getString("lastname"));
+        lastNameLbl.setText(obj.getString("lastname"));
         typeOfDiseaseLbl.setText(obj.getString("firstname"));
     }
 
