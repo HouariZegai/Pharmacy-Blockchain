@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="OpenHackathon.jar" size="741153" download="eager" />
+    <jar href="OpenHackathon.jar" size="2226373" download="eager" />
     <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
     <jar href="lib\controlsfx-samples-8.40.14.jar" size="725707" download="eager" />
     <jar href="lib\fontawesomefx-commons-8.15.jar" size="20957" download="eager" />
@@ -23,6 +23,7 @@
     <jar href="lib\fontawesomefx-weathericons-2.0.10-5.jar" size="83098" download="eager" />
     <jar href="lib\fxsampler-1.0.10.jar" size="30882" download="eager" />
     <jar href="lib\jfoenix-8.0.1.jar" size="2405715" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.42-bin.jar" size="996444" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="OpenHackathon" >
     <param name="requiredFXVersion" value="8.0+"/>

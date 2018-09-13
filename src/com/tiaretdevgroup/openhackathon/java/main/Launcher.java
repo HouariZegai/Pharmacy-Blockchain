@@ -10,7 +10,7 @@ public class Launcher extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/System.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml"));
         
         Scene scene = new Scene(root);
         

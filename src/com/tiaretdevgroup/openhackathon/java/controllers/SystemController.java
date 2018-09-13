@@ -53,8 +53,8 @@ public class SystemController implements Initializable {
     @FXML // this pane using for the Dialog of about
     private StackPane rightPane;
     
-    private StackPane sellPane, tracPane, manageAccountPane;
-    private VBox guidePane;
+    private StackPane sellPane, tracPane;
+    private VBox guidePane, manageAccountPane;
 
     /* Start Icon Option */
     @FXML
@@ -93,8 +93,8 @@ public class SystemController implements Initializable {
         // Load FXML in variable
         try {
             sellPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml"));
-            //manageAccountPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/ManageAccount.fxml"));
-            //guidePane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Guide.fxml"));
+            manageAccountPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/ManageAccount.fxml"));
+            guidePane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Guide.fxml"));
             // load Dialog
             AnchorPane aboutPane = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/About.fxml"));
             aboutDialog = new JFXDialog(rightPane, aboutPane, JFXDialog.DialogTransition.TOP);
@@ -183,19 +183,19 @@ public class SystemController implements Initializable {
 
     @FXML
     private void accountClicked() {
-//        styleBox(3);
-//        setNode(manageAccountPane);
+        styleBox(3);
+        setNode(manageAccountPane);
     }
 
     @FXML
     private void logoutClicked() {
         Stage stage;
         Parent root = null;
-        //get reference - stage         
+        //get reference - stage
         stage = (Stage) holderPane.getScene().getWindow();
         try {
             //load up other FXML document
-            root = FXMLLoader.load(getClass().getResource("/com/houarizegai/learnsql/resources/views/Login.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(SystemController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -203,6 +203,8 @@ public class SystemController implements Initializable {
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setX(475.0);
+        stage.setY(33.0);
         stage.show();
     }
 
@@ -218,8 +220,8 @@ public class SystemController implements Initializable {
 
     @FXML
     private void guideClicked() {
-//        styleBox(4);
-//        setNode(guidePane);
+        styleBox(4);
+        setNode(guidePane);
     }
 
     private void styleBox(int index) {

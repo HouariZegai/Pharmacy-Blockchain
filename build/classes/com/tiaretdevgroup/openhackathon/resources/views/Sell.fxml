@@ -37,7 +37,7 @@
             </VBox>
             <ImageView fitHeight="660.0" fitWidth="446.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/houari.png" />
+                  <Image url="@../images/slider/3.png" />
                </image>
             </ImageView>
          </children>
