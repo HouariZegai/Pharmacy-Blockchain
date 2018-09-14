@@ -4,7 +4,7 @@ import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
 import blockchain.blocks.SaleBlock
 import blockchain.chains.BlockChain
-import blockchain.chains.MaladyBlockChain
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain
 import blockchain.chains.SalesBlockChain
 import org.json.JSONArray
 import java.io.FileWriter

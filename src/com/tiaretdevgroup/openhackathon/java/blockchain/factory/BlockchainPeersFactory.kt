@@ -2,7 +2,7 @@ package blockchain.factory
 
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
-import blockchain.chains.MaladyBlockChain
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain
 import blockchain.chains.SalesBlockChain
 import com.mashape.unirest.http.Unirest
 

@@ -1,8 +1,9 @@
-package blockchain.chains
+package com.tiaretdevgroup.openhackathon.java.blockchain.chains
 
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
 import blockchain.blocks.MaladyStatus
+import blockchain.chains.BlockChain
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Malady
@@ -30,7 +31,7 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
 
     fun addBlock(idPatient: String, idMalady: String, maladyStatus: MaladyStatus) {
         val block = this.mineBlock(Malady(idPatient, idMalady, maladyStatus))
-        NotifyPeers(block).start()
+        //NotifyPeers(block).start()
     }
 
     override fun mineBlock(model: Malady): MaladyBlock {

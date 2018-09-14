@@ -17,7 +17,7 @@ public class UserDao {
         PreparedStatement prest = null;
 
         try {
-            con = new SqliteConnection().getConnection();
+            con = SqliteConnection.getConnection();
 
             if (con == null) {
                 return -1;

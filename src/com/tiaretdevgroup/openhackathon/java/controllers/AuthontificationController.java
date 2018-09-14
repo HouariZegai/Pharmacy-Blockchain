@@ -57,7 +57,7 @@ public class AuthontificationController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if (!new File("C:\\App\\token.json").exists()) {
+        if (!new File(Constants.FILE_TOKEN).exists()) {
             signUpTab.setDisable(false);
         }
         toastErrorMsg = new JFXSnackbar(authontificationPane);
@@ -161,7 +161,7 @@ public class AuthontificationController implements Initializable {
 
             JSONObject object = new JSONObject(response.getBody().toString());
 
-            File file = new File("C:\\App\\token.json");
+            File file = new File(Constants.FILE_TOKEN);
             FileOutputStream out = new FileOutputStream(file);
             out.write(object.toString().getBytes());
 

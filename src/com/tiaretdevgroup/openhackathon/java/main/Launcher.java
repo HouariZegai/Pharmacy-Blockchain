@@ -1,6 +1,6 @@
 package com.tiaretdevgroup.openhackathon.java.main;
 
-import blockchain.chains.MaladyBlockChain;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain;
 import blockchain.chains.SalesBlockChain;
 import blockchain.factory.BlockchainFactory;
 import com.mashape.unirest.http.HttpResponse;
@@ -17,17 +17,17 @@ import javafx.stage.Stage;
 import java.io.File;
 
 public class Launcher extends Application {
-    private final static String HOST = "http://a4fa76c6.ngrok.io";
+
 
     public static void main(String[] args) {
-        File file = new File("C:\\App");
+        File file = new File(Constants.FILE_BASE);
         if (!file.exists()) {
             //noinspection ResultOfMethodCallIgnored
             file.mkdir();
 
             String productsJSON = null;
             try {
-                HttpResponse<JsonNode> node = Unirest.get(Constants.CLIENT).asJson();
+                HttpResponse<JsonNode> node = Unirest.get(Constants.MALADY_BLOCK).asJson();
                 productsJSON = node.getBody().toString();
                 MaladyBlockChain chain = BlockchainFactory.INSTANCE.readMaladyBlockChainFromJSONString(productsJSON);
                 BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(chain, Constants.FILE_MALADIES);

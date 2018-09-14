@@ -1,24 +1,31 @@
 package com.tiaretdevgroup.openhackathon.java.controllers;
 
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.JFXTreeTableColumn;
-import com.jfoenix.controls.JFXTreeTableView;
-import com.jfoenix.controls.RecursiveTreeItem;
+import blockchain.chains.SalesBlockChain;
+import blockchain.factory.BlockchainFactory;
+import blockchain.models.Sale;
+import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
-import com.tiaretdevgroup.openhackathon.java.models.DiseaseTable;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import com.tiaretdevgroup.openhackathon.java.models.Disease;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.function.Predicate;
+import com.tiaretdevgroup.openhackathon.java.models.DiseaseTable;
+import com.tiaretdevgroup.openhackathon.java.utils.Constants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class TracController implements Initializable {
 
@@ -28,18 +35,44 @@ public class TracController implements Initializable {
     private JFXComboBox comboSearchBy;
     @FXML
     private JFXTreeTableView tableTrac;
-    
+
     // Column of table Traceability
     private JFXTreeTableColumn<DiseaseTable, String> identifierCol, firstNameCol, lastNameCol, produitCol, categoryCol, dateCol;
-            
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         comboSearchBy.getItems().addAll(new String[]{"Identifier", "First Name", "Last Name", "Produit", "Category", "Date"});
 
+        getAndDisplaySales();
+
         initializeTable();
         loadTable();
-    }    
-    
+    }
+
+    private void getAndDisplaySales() {
+        SalesBlockChain chain = BlockchainFactory.INSTANCE.readSalesBlockChainFromJSONFile();
+
+        List<Sale> sales = chain.getSales();
+        JSONArray array = new JSONArray();
+        for (Sale sale : sales) {
+            JSONObject object = new JSONObject();
+            object.put("client_id", sale.getIdPatient())
+                    .put("product_id", sale.getProductId());
+            array.put(object);
+        }
+
+        try {
+
+
+            HttpResponse<JsonNode> call = Unirest.post(Constants.SALES).field("q", array.toString())
+                    .asJson();
+
+            String data = call.getBody().toString();
+        } catch (UnirestException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void initializeTable() {
         identifierCol = new JFXTreeTableColumn<>("Identifier");
         identifierCol.setPrefWidth(100);
@@ -67,17 +100,17 @@ public class TracController implements Initializable {
 
         tableTrac.getColumns().addAll(identifierCol, firstNameCol, lastNameCol, produitCol, categoryCol, dateCol);
         tableTrac.setShowRoot(false);
-        
+
         searchField.textProperty().addListener(e -> {
-            filterSearchTable(); 
-        });
-        
-        comboSearchBy.setOnAction(e-> {
             filterSearchTable();
         });
-        
+
+        comboSearchBy.setOnAction(e -> {
+            filterSearchTable();
+        });
+
     }
-    
+
     private void loadTable() {
         ObservableList<DiseaseTable> diseases = FXCollections.observableArrayList();
 
@@ -90,11 +123,11 @@ public class TracController implements Initializable {
         diseasesData.add(new Disease(6, "Fares", "ZEGAi", "Lirika", "Obs", "09/01/2010"));
         diseasesData.add(new Disease(7, "Abdelkader", "ZEGAi", "hbhb", "Kolira", "01/01/2018"));
         diseasesData.add(new Disease(8, "Omar", "Khaled", "Lirika", "Obs", "17/11/2017"));
-        
+
         if (diseasesData != null) {
             for (Disease disease : diseasesData) {
                 diseases.add(new DiseaseTable(disease.getIdentifier(), disease.getFirstName(), disease.getLastName(),
-                disease.getProduit(), disease.getCategory(), disease.getDate()));
+                        disease.getProduit(), disease.getCategory(), disease.getDate()));
             }
         }
 
@@ -105,40 +138,40 @@ public class TracController implements Initializable {
             System.out.println("Error catched !");
         }
     }
-    
+
     public void filterSearchTable() {
         tableTrac.setPredicate(new Predicate<TreeItem<DiseaseTable>>() {
-                @Override
-                public boolean test(TreeItem<DiseaseTable> user) {
-                    switch (comboSearchBy.getSelectionModel().getSelectedIndex()) {
-                        case 0:
-                            return user.getValue().getIdentifier().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                        case 1:
-                            return user.getValue().getFirstName().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                        case 2:
-                            return user.getValue().getLastName().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                        case 3:
-                            return user.getValue().getProduit().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                        case 4:
-                            return user.getValue().getCategory().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                        case 5:
-                            return user.getValue().getDate().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                        default:
-                            return user.getValue().getIdentifier().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
-                                    || user.getValue().getFirstName().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
-                                    || user.getValue().getLastName().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
-                                    || user.getValue().getProduit().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
-                                    || user.getValue().getCategory().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
-                                    || user.getValue().getDate().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
-                    }
+            @Override
+            public boolean test(TreeItem<DiseaseTable> user) {
+                switch (comboSearchBy.getSelectionModel().getSelectedIndex()) {
+                    case 0:
+                        return user.getValue().getIdentifier().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
+                    case 1:
+                        return user.getValue().getFirstName().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
+                    case 2:
+                        return user.getValue().getLastName().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
+                    case 3:
+                        return user.getValue().getProduit().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
+                    case 4:
+                        return user.getValue().getCategory().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
+                    case 5:
+                        return user.getValue().getDate().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
+                    default:
+                        return user.getValue().getIdentifier().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
+                                || user.getValue().getFirstName().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
+                                || user.getValue().getLastName().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
+                                || user.getValue().getProduit().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
+                                || user.getValue().getCategory().getValue().toLowerCase().contains(searchField.getText().toLowerCase())
+                                || user.getValue().getDate().getValue().toLowerCase().contains(searchField.getText().toLowerCase());
                 }
-            });
+            }
+        });
     }
-    
+
     @FXML
     private void btnReset() {
         comboSearchBy.getSelectionModel().clearSelection();
         searchField.setText("");
     }
-    
+
 }

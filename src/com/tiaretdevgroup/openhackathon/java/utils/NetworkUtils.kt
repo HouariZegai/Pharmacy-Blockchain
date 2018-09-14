@@ -1,6 +1,7 @@
 package utils
 
 import com.mashape.unirest.http.Unirest
+import com.tiaretdevgroup.openhackathon.java.utils.Constants
 import org.json.JSONArray
 
 /**
@@ -8,7 +9,7 @@ import org.json.JSONArray
  */
 object NetworkUtils {
 
-    const val BASE_URL = ""
+    const val BASE_URL = Constants.HOST
     const val NODES = ""
 
     fun getAllNodes(): Array<String> {
