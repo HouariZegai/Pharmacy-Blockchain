@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" line="51" mnemonic="6" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/blockchain/chains/SalesBlockChain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/SalesBlockChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/SalesBlockChain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainPeersFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainPeersFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/controllers/SellController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/controllers/SellController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/main/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/main/Launcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/css/sell.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/css/sell.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/images/icons/Sheild-big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/images/icons/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/images/icons/chat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/images/icons/loginlogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/About.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/About.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/TracController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/TracController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/models/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/models/Disease.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/j.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/j.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/sell.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/sell.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/Sheild-big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/chat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/loginlogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/About.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/About.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,101 +170,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TracController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/TracController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="152" column="38" lean-forward="true" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/Constants.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashUtils.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/HashUtils.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Disease.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/models/Disease.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="j.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/j.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="12" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="1014">
+              <caret line="53" column="3" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SellController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-385">
-              <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-              <folding>
-                <element signature="method#initialize#0;class#SellController#0" />
-                <element signature="method#initMedicament#0;class#SellController#0" />
-                <element signature="method#getJSONMedicament#0;class#SellController#0" />
-                <element signature="method#getJSONProfile#0;class#SellController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqliteConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockchainFactory.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+      <file leaf-file-name="Sell.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1118">
+              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -281,6 +207,7 @@
       <find>Stage</find>
       <find>HOST</find>
       <find>&quot;C:\\App\\token.json&quot;</find>
+      <find>JFXButton</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -299,28 +226,31 @@
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SystemController.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/MysqlConnection.java" />
-        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/NetworkUtils.kt" />
-        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/MaladyBlockChain.kt" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt" />
-        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/SalesBlockChain.kt" />
         <option value="$PROJECT_DIR$/src/j.json" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/models/Disease.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/TracController.java" />
         <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/Constants.kt" />
+        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java" />
+        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/sell.css" />
+        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/About.fxml" />
+        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml" />
+        <option value="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="149" />
-    <option name="y" value="95" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -333,8 +263,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -358,99 +287,7 @@
               <item name="Open Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="blocks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="chains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Open Java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
@@ -458,6 +295,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="openhackathon" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Open Java" type="b2602c69:ProjectViewProjectNode" />
@@ -475,7 +313,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -489,7 +328,7 @@
     <property name="SearchEverywhereHistoryKey" value="UserD&#9;FILE&#9;file://C:/Users/Charfaoui Younes/Desktop/Open Java/src/com/tiaretdevgroup/openhackathon/java/dao/UserDao.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../New folder/Jars/JavaFxLibs/fontawesomefx/fontawesomefx-weathericons-2.0.10-5.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../controlsfx/fxsampler-1.0.10.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21264368" />
@@ -498,6 +337,9 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Charfaoui Younes\Desktop\Open Java\src\com\tiaretdevgroup\openhackathon\resources\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HouariZegai\Desktop\Open Java\.idea\libraries" />
       <recent name="E:\OpenHackathonPharmacy\src\com\tiaretdevgroup\openhackathon\java" />
@@ -685,24 +527,22 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3251634" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3289689" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.59313726" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5925297" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.6846405" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2700454" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22012103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="6" />
@@ -711,17 +551,18 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Flutter Inspector" order="7" weight="0.32980332" />
       <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32427844" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Problems" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -736,60 +577,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/ManageAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3406">
-          <caret line="131" column="26" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
-          <folding>
-            <element signature="method#initialize#0;class#SellController#0" />
-            <element signature="method#onSell#0;class#SellController#0" />
-            <element signature="method#initMedicament#0;class#SellController#0" />
-            <element signature="method#getJSONProfile#0;class#SellController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1378">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="89" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/background.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/iconMan.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -837,14 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/blocks/SaleBlock.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -864,30 +643,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/manageaccount.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/models/DiseaseTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="48" lean-forward="true" selection-start-line="6" selection-end-line="48" />
-          <folding>
-            <element signature="method#DiseaseTable#0;class#DiseaseTable#0" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/MysqlConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/MysqlConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/blocks/Block.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -920,9 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="e#27#159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -937,13 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/MaladyBlockChain.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -969,16 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/SalesBlockChain.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="107" column="42" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
-          <folding>
-            <element signature="e#27#349#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1000,61 +743,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-385">
-          <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-          <folding>
-            <element signature="method#initialize#0;class#SellController#0" />
-            <element signature="method#initMedicament#0;class#SellController#0" />
-            <element signature="method#getJSONMedicament#0;class#SellController#0" />
-            <element signature="method#getJSONProfile#0;class#SellController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/dao/SqliteConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="-7">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="30" column="9" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/TracController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="152" column="38" lean-forward="true" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+        <state relative-caret-position="26">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/SalesBlockChain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/chains/MaladyBlockChain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/chat.png" />
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/chat1.png" />
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/Folder-big.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/loginlogo.png" />
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/mange_question.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/images/icons/Sheild-big.png" />
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/css/sell.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/Constants.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
-          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/About.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/ManageAccount.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Trac.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/utils/HashUtils.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
+        <state relative-caret-position="-7">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="30" column="9" selection-start-line="21" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="53" column="3" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Sell.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1118">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
         </state>
       </provider>
     </entry>

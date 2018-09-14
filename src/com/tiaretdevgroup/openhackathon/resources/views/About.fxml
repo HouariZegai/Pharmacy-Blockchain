@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="620.0" stylesheets="@../css/about.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.AboutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="620.0" stylesheets="@../css/about.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.AboutController">
    <children>
       <VBox fillWidth="false" layoutX="39.0" layoutY="65.0" prefHeight="352.0" prefWidth="514.0">
          <children>
@@ -24,7 +24,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Label>
-            <Label prefHeight="50.0" styleClass="label-info" text="HouariZegai14@gmail.com">
+            <Label prefHeight="50.0" styleClass="label-info" text="contact@TiaretDevGroup.me">
                <graphic>
                   <Icons525View glyphName="GMAIL" size="28" styleClass="font-about" />
                </graphic>
@@ -97,9 +97,9 @@
             <Label styleClass="label-bottom" text="by TiaretDevGroup" />
          </children>
       </HBox>
-      <ImageView fitHeight="270.0" fitWidth="209.0" layoutX="330.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="260.0" fitWidth="260.0" layoutX="330.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/houari.png" />
+            <Image url="@../images/OpenChainLogo.png" />
          </image>
       </ImageView>
       <Label layoutX="211.0" layoutY="7.0" prefHeight="53.0" prefWidth="170.0" styleClass="header-title" text="About Us" />

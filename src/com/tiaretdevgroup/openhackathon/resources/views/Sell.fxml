@@ -9,42 +9,68 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<StackPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SellController">
+<StackPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SellController">
    <children>
-      <HBox fx:id="checkPane" spacing="80.0">
+      <HBox fx:id="checkPane" spacing="50.0">
          <children>
             <VBox fx:id="rightCheckPane" maxWidth="1.7976931348623157E308" prefHeight="550.0">
                <children>
                   <Label styleClass="title-header" text="Patient Verification" />
-                  <VBox prefHeight="88.0" prefWidth="350.0" spacing="20.0">
-                     <children>
-                        <Label text="Please Enter The Patiant ID to verifiy" />
-                        <JFXTextField fx:id="identifierField" focusColor="#0069d9" labelFloat="true" promptText="Patiant ID" styleClass="field" />
-                     </children>
+                  <VBox prefHeight="108.0" prefWidth="350.0" spacing="10.0">
                      <VBox.margin>
                         <Insets top="180.0" />
                      </VBox.margin>
+                     <children>
+                        <VBox prefWidth="350.0" spacing="30.0">
+                           <children>
+                              <Label text="Please Enter The Patiant ID to verifiy" />
+                              <JFXTextField fx:id="identifierField" focusColor="#0069d9" labelFloat="true" promptText="Patiant ID" styleClass="field" />
+                           </children>
+                        </VBox>
+                     </children>
                   </VBox>
                   <JFXButton buttonType="RAISED" onAction="#onCheck" styleClass="btn" text="Check">
                      <opaqueInsets>
                         <Insets top="16.0" />
                      </opaqueInsets>
                   </JFXButton>
+                  <AnchorPane prefHeight="242.0" prefWidth="350.0">
+                     <children>
+                        <ImageView layoutX="15.0" layoutY="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sell/pills.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
                <padding>
                   <Insets left="20.0" top="20.0" />
                </padding>
             </VBox>
-            <ImageView fitHeight="660.0" fitWidth="446.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/slider/3.png" />
-               </image>
-            </ImageView>
+            <AnchorPane prefHeight="560.0" prefWidth="477.0">
+               <HBox.margin>
+                  <Insets top="90.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="138.0" fitWidth="234.0" layoutX="27.0" layoutY="372.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/sell/pillwalk_1.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="382.0" fitWidth="423.0" layoutX="12.0" layoutY="10.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/sell/PharmacySell.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
       <HBox fx:id="sellProductPane" spacing="80.0" visible="false">

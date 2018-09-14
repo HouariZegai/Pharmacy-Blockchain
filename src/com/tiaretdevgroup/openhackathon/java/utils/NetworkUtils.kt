@@ -9,11 +9,11 @@ import org.json.JSONArray
  */
 object NetworkUtils {
 
-    const val BASE_URL = Constants.HOST
-    const val NODES = ""
+
+    private const val NODES = "${Constants.HOST}/api/pharmacy"
 
     fun getAllNodes(): Array<String> {
-        val data = Unirest.get("$BASE_URL/$NODES").asJson()
+        val data = Unirest.get(NODES).asJson()
         val array = JSONArray(data.body.toString())
         val node = mutableListOf<String>()
         for (i in 0 until (array.length())) {

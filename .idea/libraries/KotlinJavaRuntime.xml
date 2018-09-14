@@ -38,6 +38,9 @@
       <root url="jar://$PROJECT_DIR$/../New folder/Jars/JavaFxLibs/fontawesomefx/fontawesomefx-materialicons-2.2.0-5.jar!/" />
       <root url="jar://$PROJECT_DIR$/../New folder/Jars/JavaFxLibs/fontawesomefx/fontawesomefx-octicons-4.3.0-5.jar!/" />
       <root url="jar://$PROJECT_DIR$/../New folder/Jars/JavaFxLibs/fontawesomefx/fontawesomefx-weathericons-2.0.10-5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../controlsfx/controlsfx-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../controlsfx/controlsfx-samples-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../controlsfx/fxsampler-1.0.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
@@ -46,6 +49,7 @@
       <root url="jar://$PROJECT_DIR$/lib/kotlin-test-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../controlsfx/controlsfx-samples-8.40.14.jar!/" />
     </SOURCES>
   </library>
 </component>

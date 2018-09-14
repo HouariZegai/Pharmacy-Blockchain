@@ -45,11 +45,6 @@
                         <FontAwesomeIconView glyphName="REFRESH" size="24" wrappingWidth="9.571428298950195" />
                      </graphic>
                   </JFXButton>
-                  <JFXButton buttonType="RAISED" prefHeight="39.0" prefWidth="130.0" ripplerFill="#4264eb" styleClass="btn-view" text="Button">
-                     <HBox.margin>
-                        <Insets right="15.0" />
-                     </HBox.margin>
-                  </JFXButton>
                </children>
             </HBox>
             <JFXTreeTableView fx:id="tableTrac" fixedCellSize="0.0" prefHeight="496.0" prefWidth="1292.0" />

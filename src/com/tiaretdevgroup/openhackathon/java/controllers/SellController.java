@@ -13,9 +13,14 @@ import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain;
 import com.tiaretdevgroup.openhackathon.java.utils.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.util.Duration;
+import org.controlsfx.control.Notifications;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -117,6 +122,13 @@ public class SellController implements Initializable {
         if (last == null || isThreeMonth(last, new Date())) {
             salesBlockChain.addBlock(identifierLbl.getText().trim(), codeSelected, String.valueOf(idPharmacy));
             BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(salesBlockChain, Constants.FILE_SALES);
+            Notifications notification = Notifications.create()
+                        .title("You Successfuly Sell Product !")
+                        .graphic(new ImageView(new Image("/com/tiaretdevgroup/openhackathon/resources/images/icons/valid.png")))
+                        .hideAfter(Duration.millis(2000))
+                        .position(Pos.BOTTOM_RIGHT);
+                notification.darkStyle();
+                notification.show();
         } else {
             toastErrorMsgProductPane.show("You bought recently the same product", 2000);
         }
@@ -175,3 +187,5 @@ public class SellController implements Initializable {
     }
 
 }
+
+
