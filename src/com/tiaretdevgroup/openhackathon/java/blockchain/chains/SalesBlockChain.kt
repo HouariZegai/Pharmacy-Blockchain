@@ -1,14 +1,18 @@
-package blockchain.chains
+package com.tiaretdevgroup.openhackathon.java.blockchain.chains
 
 import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
 import blockchain.blocks.SaleBlock
+import blockchain.chains.BlockChain
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Sale
+import com.tiaretdevgroup.openhackathon.java.utils.Constants
 import org.json.JSONObject
 import utils.HashUtils
 import java.net.InetAddress
+import java.nio.file.Files
+import java.nio.file.Paths
 import java.util.*
 
 
@@ -98,13 +102,18 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         return false
     }
 
+
     fun getSales(): List<Sale> {
+        val json = JSONObject(String(Files.readAllBytes(Paths.get(Constants.FILE_TOKEN))))
+        val idPharmacy = json.getInt("id")
         val data = mutableListOf<Sale>()
         for (block in blockChain) {
-            // check if id pharmacy is ours if()
-            val patient = block.idPatient
-            val product = block.productId
-            data.add(Sale(patient, product, ""))
+            if (idPharmacy.toString() == block.pharmacyId) {
+
+                val patient = block.idPatient
+                val product = block.productId
+                data.add(Sale(patient, product, block.pharmacyId))
+            }
         }
         return data
     }

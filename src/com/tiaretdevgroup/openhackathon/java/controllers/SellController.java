@@ -1,7 +1,5 @@
 package com.tiaretdevgroup.openhackathon.java.controllers;
 
-import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain;
-import blockchain.chains.SalesBlockChain;
 import blockchain.factory.BlockchainFactory;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXSnackbar;
@@ -10,6 +8,8 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain;
 import com.tiaretdevgroup.openhackathon.java.utils.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,7 +19,10 @@ import javafx.scene.layout.VBox;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -102,16 +105,21 @@ public class SellController implements Initializable {
         }
 
         SalesBlockChain salesBlockChain = BlockchainFactory.INSTANCE.readSalesBlockChainFromJSONFile();
-
+        JSONObject json = null;
+        try {
+            json = new JSONObject(new String(Files.readAllBytes(Paths.get(Constants.FILE_TOKEN))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assert json != null;
+        int idPharmacy = json.getInt("id");
         Date last = salesBlockChain.lastSales(identifierLbl.getText().trim(), codeSelected);
         if (last == null || isThreeMonth(last, new Date())) {
-            salesBlockChain.addBlock(identifierLbl.getText().trim(), codeSelected, "123");
+            salesBlockChain.addBlock(identifierLbl.getText().trim(), codeSelected, String.valueOf(idPharmacy));
             BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(salesBlockChain, Constants.FILE_SALES);
         } else {
             toastErrorMsgProductPane.show("You bought recently the same product", 2000);
         }
-
-
     }
 
     private boolean isThreeMonth(Date last, Date date) {

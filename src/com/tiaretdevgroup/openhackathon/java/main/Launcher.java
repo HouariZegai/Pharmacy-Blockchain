@@ -1,7 +1,7 @@
 package com.tiaretdevgroup.openhackathon.java.main;
 
 import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain;
-import blockchain.chains.SalesBlockChain;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain;
 import blockchain.factory.BlockchainFactory;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;

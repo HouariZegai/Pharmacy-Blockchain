@@ -4,8 +4,9 @@ import blockchain.blocks.Block
 import blockchain.blocks.MaladyBlock
 import blockchain.blocks.SaleBlock
 import blockchain.chains.BlockChain
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain
 import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain
-import blockchain.chains.SalesBlockChain
+import com.tiaretdevgroup.openhackathon.java.utils.Constants
 import org.json.JSONArray
 import java.io.FileWriter
 import java.nio.file.Files
@@ -17,8 +18,8 @@ import java.nio.file.Paths
  */
 object BlockchainFactory {
 
-    private const val MALADIES = "C:\\App\\maladies.json"
-    private const val SALES = "C:\\App\\sales.json"
+    private const val MALADIES = Constants.FILE_MALADIES
+    private const val SALES = Constants.FILE_SALES
 
     fun readMaladyBlockChainFromJSONFile(): MaladyBlockChain {
         val blocks = JSONArray(String(Files.readAllBytes(Paths.get(MALADIES))))

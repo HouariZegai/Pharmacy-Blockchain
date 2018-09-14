@@ -7,7 +7,19 @@ public class Disease {
     private String produit;
     private String category;
     private String date;
-    
+
+    @Override
+    public String toString() {
+        return "Disease{" +
+                "identifier=" + identifier +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", produit='" + produit + '\'' +
+                ", category='" + category + '\'' +
+                ", date='" + date + '\'' +
+                '}';
+    }
+
     public Disease(int identifier, String firstName, String lastName, String produit, String category, String date) {
         this.identifier = identifier;
         this.firstName = firstName;

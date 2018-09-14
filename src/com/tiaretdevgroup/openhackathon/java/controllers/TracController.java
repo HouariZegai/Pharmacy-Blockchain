@@ -1,6 +1,5 @@
 package com.tiaretdevgroup.openhackathon.java.controllers;
 
-import blockchain.chains.SalesBlockChain;
 import blockchain.factory.BlockchainFactory;
 import blockchain.models.Sale;
 import com.jfoenix.controls.*;
@@ -9,6 +8,7 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain;
 import com.tiaretdevgroup.openhackathon.java.models.Disease;
 import com.tiaretdevgroup.openhackathon.java.models.DiseaseTable;
 import com.tiaretdevgroup.openhackathon.java.utils.Constants;
@@ -43,13 +43,12 @@ public class TracController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         comboSearchBy.getItems().addAll(new String[]{"Identifier", "First Name", "Last Name", "Produit", "Category", "Date"});
 
-        getAndDisplaySales();
 
         initializeTable();
         loadTable();
     }
 
-    private void getAndDisplaySales() {
+    private List<Disease> getAndDisplaySales() {
         SalesBlockChain chain = BlockchainFactory.INSTANCE.readSalesBlockChainFromJSONFile();
 
         List<Sale> sales = chain.getSales();
@@ -60,17 +59,32 @@ public class TracController implements Initializable {
                     .put("product_id", sale.getProductId());
             array.put(object);
         }
-
         try {
+            String url = Constants.SALES;
 
-
-            HttpResponse<JsonNode> call = Unirest.post(Constants.SALES).field("q", array.toString())
+            HttpResponse<JsonNode> call = Unirest.post(url).field("q", array.toString())
                     .asJson();
 
-            String data = call.getBody().toString();
+            JSONArray jsonArray = new JSONArray(call.getBody().toString());
+            List<Disease> list = new ArrayList<>();
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject object = jsonArray.getJSONObject(i);
+                int id = object.getInt("identifier");
+                String fName = object.getString("firstname");
+                String lName = object.getString("lastname");
+                int category = object.getInt("category_id");
+                String date = object.getString("humanDate");
+                String product = object.getString("name");
+                System.out.println(new Disease(id, fName, lName, product, String.valueOf(category), date).toString());
+                list.add(new Disease(id, fName, lName, product, String.valueOf(category), date));
+            }
+            return list;
         } catch (UnirestException e) {
             e.printStackTrace();
         }
+
+        return null;
     }
 
     private void initializeTable() {
@@ -114,15 +128,8 @@ public class TracController implements Initializable {
     private void loadTable() {
         ObservableList<DiseaseTable> diseases = FXCollections.observableArrayList();
 
-        List<Disease> diseasesData = new ArrayList<>(); // Get users from DB
-        diseasesData.add(new Disease(1, "Houari", "ZEGAi", "Lirika", "Obs", "17/11/2015"));
-        diseasesData.add(new Disease(2, "Mohammed", "Miloudi", "Basisa", "ind", "17/12/2016"));
-        diseasesData.add(new Disease(3, "Younes", "Charfaoui", "hbhb", "ind", "15/08/2017"));
-        diseasesData.add(new Disease(4, "Djamel", "Zerrouki", "karizma", "mala", "19/09/2018"));
-        diseasesData.add(new Disease(5, "Fatima", "Chaib", "vivi", "Kolira", "17/01/2009"));
-        diseasesData.add(new Disease(6, "Fares", "ZEGAi", "Lirika", "Obs", "09/01/2010"));
-        diseasesData.add(new Disease(7, "Abdelkader", "ZEGAi", "hbhb", "Kolira", "01/01/2018"));
-        diseasesData.add(new Disease(8, "Omar", "Khaled", "Lirika", "Obs", "17/11/2017"));
+        List<Disease> diseasesData =  getAndDisplaySales();
+
 
         if (diseasesData != null) {
             for (Disease disease : diseasesData) {

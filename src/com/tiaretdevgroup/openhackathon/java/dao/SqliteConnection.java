@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class SqliteConnection {
 
 
-    private static final String DB_LOCATION = Constants.FILE_BASE + "\\App\\database.db";
+    private static final String DB_LOCATION = Constants.FILE_BASE + "\\database.db";
     private static final String CREATE_TABLE = "CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT," +
             " username TEXT NOT NULL," +
             " password TEXT NOT NULL);";
@@ -28,7 +28,6 @@ public class SqliteConnection {
                 con = DriverManager.getConnection("jdbc:sqlite:" + DB_LOCATION);
             }
 
-            System.out.println("Connected !");
         } catch (SQLException se) {
             System.out.println("Error msg(SQL): " + se.getMessage());
         } catch (ClassNotFoundException ex) {
