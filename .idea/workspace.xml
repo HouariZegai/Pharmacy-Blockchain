@@ -4,22 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" line="27" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/controllers/SellController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/controllers/SellController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/main/Launcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/main/Launcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/main/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/main/Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/java/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OpenHackathonPharmacy/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/blockchain/factory/BlockchainFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/SystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/main/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -135,7 +120,7 @@
       <file leaf-file-name="AuthontificationController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="47">
               <caret line="170" column="35" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -525,7 +510,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -537,7 +521,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.49673203" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.6862745" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="14" visible="true" weight="0.6862745" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" order="3" />
@@ -797,7 +781,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tiaretdevgroup/openhackathon/java/controllers/AuthontificationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="47">
           <caret line="170" column="35" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
