@@ -3,6 +3,9 @@ package utils
 import blockchain.blocks.Block
 import java.security.MessageDigest
 
+/**
+ * Class with static methods to hash String and blocks
+ */
 class HashUtils {
 
     companion object {

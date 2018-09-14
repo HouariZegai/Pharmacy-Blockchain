@@ -3,7 +3,7 @@ package blockchain.blocks
 import org.json.JSONObject
 
 /**
- * @Definition : Simple class to represent the Block of a Malady
+ * Simple class to represent the Block of a Malady
  */
 class MaladyBlock(number: Long,
                   val idPatient: String,

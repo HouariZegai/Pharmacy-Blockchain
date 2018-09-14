@@ -17,7 +17,7 @@ public class UserDao {
         PreparedStatement prest = null;
 
         try {
-            con = new MysqlConnection().getConnection();
+            con = new SqliteConnection().getConnection();
 
             if (con == null) {
                 return -1;
@@ -51,5 +51,42 @@ public class UserDao {
         
         return 1;
     }
-    
+
+    public int addUser(String user, String pass) {
+        String sql = "INSERT INTO `users`(username, password) VALUES(?, ?);";
+        Connection con = null;
+        PreparedStatement prest = null;
+
+        try {
+            con = SqliteConnection.getConnection();
+
+            if (con == null) {
+                return -1;
+            }
+
+            prest = null;
+            prest = con.prepareStatement(sql);
+            prest.setString(1, user);
+            prest.setString(2, MD5Hashing.getHash(pass));
+            prest.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.out.println("Error msg: " + ex.getMessage());
+            return 1;
+        } finally {
+            try {
+                if (prest != null) {
+                    prest.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        return 0;
+    }
+
 }

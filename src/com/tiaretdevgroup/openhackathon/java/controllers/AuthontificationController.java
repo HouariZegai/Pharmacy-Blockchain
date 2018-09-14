@@ -29,7 +29,6 @@ import java.util.ResourceBundle;
 
 public class AuthontificationController implements Initializable {
 
-    private final static String HOST = "http://a4fa76c6.ngrok.io";
     /* Start Login Part */
     @FXML
     private AnchorPane authontificationPane;
@@ -104,11 +103,9 @@ public class AuthontificationController implements Initializable {
         Parent rootSystem = null;
         Stage stage;
 
-
         //get reference - stage
-        if (usernameSignInField.getScene() == null) System.out.println("is Null");
-        else System.out.println("is Not Null");
         stage = (Stage) usernameSignInField.getScene().getWindow();
+
         try {
             //load up other FXML document
             rootSystem = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/System.fxml"));
@@ -116,12 +113,11 @@ public class AuthontificationController implements Initializable {
         } catch (IOException ex) {
             System.out.println("Error msg: " + ex.getMessage());
         }
-        System.out.println("b6");
+
         //create a new scene with root and set the stage
         Scene scene = new Scene(rootSystem);
         stage.setScene(scene);
-        stage.hide();
-
+        stage.show();
         stage.setX(100);
         stage.setY(20);
     }
@@ -157,7 +153,7 @@ public class AuthontificationController implements Initializable {
 
         try {
             InetAddress inetAddress = InetAddress.getLocalHost();
-            HttpResponse<JsonNode> response = Unirest.post("http://a4fa76c6.ngrok.io/api/pharmacy")
+            HttpResponse<JsonNode> response = Unirest.post("http://953caeb3.ngrok.io/api/pharmacy")
                     .field("code", nRegistreComSignUpField.getText().trim())
                     .field("ip", inetAddress.getHostAddress())
                     .asJson();
@@ -169,8 +165,17 @@ public class AuthontificationController implements Initializable {
             out.write(object.toString().getBytes());
 
             //add user to data base
+            int status = new UserDao().addUser(usernameSignUpField.getText().trim().toLowerCase(), passwordSignUpField.getText());
 
-            goToMain();
+            switch (status) {
+                case -1 : toastErrorMsg.show("Connection Error !", 2000);
+                    break;
+                case 1 : toastErrorMsg.show("Error Insert !", 2000);
+                    break;
+                default: goToMain();
+                    break;
+            }
+
         } catch (UnirestException | IOException e) {
             e.printStackTrace();
         }

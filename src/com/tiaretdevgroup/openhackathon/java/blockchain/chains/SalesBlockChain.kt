@@ -6,13 +6,15 @@ import blockchain.blocks.SaleBlock
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Sale
+import blockchain.workers.NotifyPeers
 import org.json.JSONObject
 import utils.HashUtils
+import java.net.InetAddress
 import java.util.*
 
 
 /**
- * @definition: Class that represent the Sales BlockChain
+ * Class that represent the Sales BlockChain
  * and it's corresponding functions.
  */
 class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
@@ -23,6 +25,11 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         if (blockChain.size == 0)
             blockChain.add(SaleBlock(1, "First One",
                     "First Product", "12", 1, Date().time, "0000"))
+    }
+
+    fun addBlock(idPatient: String, idProduct: String, idPharmacy: String) {
+        val block = this.mineBlock(blockchain.models.Sale(idPatient, idProduct, idPharmacy))
+        NotifyPeers(block).start()
     }
 
     /**
@@ -55,6 +62,7 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 model.pharmacyId,
                 nonce, Date().time, lastBLock.hash)
         blockChain.add(newBlock)
+
         return newBlock
     }
 
@@ -67,13 +75,14 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
         return null
     }
 
-    fun replaceChain(nodes: Array<String>) : Boolean {
-
+    override fun replaceChain(nodes: Array<String>): Boolean {
+        val address = InetAddress.getLocalHost()
         var longestChain: BlockChain<*, *>? = null
         var maxLength = blockChain.size
 
-        for (node in nodes){
-            val blockPeer = BlockchainPeersFactory.getMaladiesBlockchain(node)
+        for (node in nodes) {
+            if (address.hostAddress == node) continue
+            val blockPeer = BlockchainPeersFactory.getSaleBlockchain(node)
             val len = blockPeer.blockChain.size
 
             if (len > maxLength && blockPeer.isValid()) {
@@ -81,10 +90,10 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 longestChain = blockPeer
             }
         }
-        if (longestChain != null){
+        if (longestChain != null) {
             @Suppress("UNCHECKED_CAST")
             blockChain = longestChain.blockChain as MutableList<SaleBlock>
-            BlockchainFactory.saveBlockChainToJSONFile(this,"sales.json")
+            BlockchainFactory.saveBlockChainToJSONFile(this, "sales.json")
             return true
         }
         return false

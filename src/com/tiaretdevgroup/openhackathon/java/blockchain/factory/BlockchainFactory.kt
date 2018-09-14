@@ -11,10 +11,17 @@ import java.io.FileWriter
 import java.nio.file.Files
 import java.nio.file.Paths
 
+/**
+ * Singleton Class to create Blockchains from file and JSON String
+ * and also for saving the Blockchains in files.
+ */
 object BlockchainFactory {
 
-    fun readMaladyBlockChainFromJSONFile(path: String): MaladyBlockChain {
-        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(path))))
+    private const val MALADIES = "C:\\App\\maladies.json"
+    private const val SALES = "C:\\App\\sales.json"
+
+    fun readMaladyBlockChainFromJSONFile(): MaladyBlockChain {
+        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(MALADIES))))
         val allBlocks = mutableListOf<MaladyBlock>()
 
         for (i in 0 until blocks.length()) {
@@ -51,8 +58,8 @@ object BlockchainFactory {
         return MaladyBlockChain(allBlocks)
     }
 
-    fun readSalesBlockChainFromJSONFile(path: String): SalesBlockChain {
-        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(path))))
+    fun readSalesBlockChainFromJSONFile(): SalesBlockChain {
+        val blocks = JSONArray(String(Files.readAllBytes(Paths.get(SALES))))
         val allBlocks = mutableListOf<SaleBlock>()
 
         for (i in 0 until (blocks.length())) {
@@ -97,10 +104,9 @@ object BlockchainFactory {
         return SalesBlockChain(allBlocks)
     }
 
-
     fun saveBlockChainToJSONFile(blockChain: BlockChain<*, *>, path: String) {
-        FileWriter(path).use {
-            it.write(blockChain.toSaveString())
+        FileWriter(path).use { file ->
+            file.write(blockChain.toSaveString())
         }
     }
 }
