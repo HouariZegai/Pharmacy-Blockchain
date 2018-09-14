@@ -19,27 +19,15 @@ import java.io.File;
 public class Launcher extends Application {
     private final static String HOST = "http://a4fa76c6.ngrok.io";
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml"));
-        
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-
-        stage.show();
-    }
-
     public static void main(String[] args) {
         File file = new File("C:\\App");
-        if(!file.exists()) {
+        if (!file.exists()) {
+            //noinspection ResultOfMethodCallIgnored
             file.mkdir();
-            // Get The main block chain
-            String urls = HOST + "/api/block/client";
 
             String productsJSON = null;
             try {
-                HttpResponse<JsonNode> node = Unirest.get(urls).asJson();
+                HttpResponse<JsonNode> node = Unirest.get(Constants.CLIENT).asJson();
                 productsJSON = node.getBody().toString();
                 MaladyBlockChain chain = BlockchainFactory.INSTANCE.readMaladyBlockChainFromJSONString(productsJSON);
                 BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(chain, Constants.FILE_MALADIES);
@@ -47,18 +35,26 @@ public class Launcher extends Application {
                 e.printStackTrace();
             }
 
-            urls = HOST + "/api/block/sale";
-
-            productsJSON = null;
             try {
-                HttpResponse<JsonNode> node = Unirest.get(urls).asJson();
+                HttpResponse<JsonNode> node = Unirest.get(Constants.SALE_BLOCK).asJson();
                 productsJSON = node.getBody().toString();
                 SalesBlockChain chain = BlockchainFactory.INSTANCE.readSalesBlockChainFromJSONString(productsJSON);
-                BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(chain,"C:\\App\\sales.json");
+                BlockchainFactory.INSTANCE.saveBlockChainToJSONFile(chain, Constants.FILE_SALES);
             } catch (UnirestException e) {
                 e.printStackTrace();
             }
         }
         launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml"));
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+
+        stage.show();
     }
 }

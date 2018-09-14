@@ -8,6 +8,7 @@ import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.tiaretdevgroup.openhackathon.java.dao.UserDao;
+import com.tiaretdevgroup.openhackathon.java.utils.Constants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -153,7 +154,7 @@ public class AuthontificationController implements Initializable {
 
         try {
             InetAddress inetAddress = InetAddress.getLocalHost();
-            HttpResponse<JsonNode> response = Unirest.post("http://953caeb3.ngrok.io/api/pharmacy")
+            HttpResponse<JsonNode> response = Unirest.post(Constants.PHARMACY_SIGNUP)
                     .field("code", nRegistreComSignUpField.getText().trim())
                     .field("ip", inetAddress.getHostAddress())
                     .asJson();

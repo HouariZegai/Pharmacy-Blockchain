@@ -14,22 +14,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<StackPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SellController">
+<StackPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SellController">
    <children>
       <HBox fx:id="checkPane" spacing="80.0">
          <children>
             <VBox fx:id="rightCheckPane" maxWidth="1.7976931348623157E308" prefHeight="550.0">
                <children>
-                  <Label styleClass="title-header" text="Verification Sell" />
+                  <Label styleClass="title-header" text="Patient Verification" />
                   <VBox prefHeight="88.0" prefWidth="350.0" spacing="20.0">
                      <children>
-                        <JFXTextField fx:id="identifierField" focusColor="#0069d9" labelFloat="true" promptText="Identifier" styleClass="field" />
-                        <JFXButton buttonType="RAISED" onAction="#onCheck" styleClass="btn" text="Check" />
+                        <Label text="Please Enter The Patiant ID to verifiy" />
+                        <JFXTextField fx:id="identifierField" focusColor="#0069d9" labelFloat="true" promptText="Patiant ID" styleClass="field" />
                      </children>
                      <VBox.margin>
                         <Insets top="180.0" />
                      </VBox.margin>
                   </VBox>
+                  <JFXButton buttonType="RAISED" onAction="#onCheck" styleClass="btn" text="Check">
+                     <opaqueInsets>
+                        <Insets top="16.0" />
+                     </opaqueInsets>
+                  </JFXButton>
                </children>
                <padding>
                   <Insets left="20.0" top="20.0" />

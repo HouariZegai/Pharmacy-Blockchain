@@ -3,7 +3,6 @@ package com.tiaretdevgroup.openhackathon.java.controllers;
 import blockchain.chains.MaladyBlockChain;
 import blockchain.chains.SalesBlockChain;
 import blockchain.factory.BlockchainFactory;
-import blockchain.models.Sale;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
@@ -30,7 +29,7 @@ import java.util.ResourceBundle;
 public class SellController implements Initializable {
 
     // Medicaments
-    List<String[]> products;
+    private List<String[]> products;
 
     @FXML
     private HBox checkPane, sellProductPane;
@@ -124,7 +123,7 @@ public class SellController implements Initializable {
     }
 
     private void getJSONMedicament() {
-        String urls = Constants.HOST + "/api/client/" + identifierField.getText().trim() + "/product";
+        String urls = Constants.CLIENT + identifierField.getText().trim() + "/product";
 
         String productsJSON = null;
         try {
@@ -150,7 +149,7 @@ public class SellController implements Initializable {
     }
 
     private void getJSONProfile() {
-        String urls = Constants.HOST + "/api/client/" + identifierField.getText().trim();
+        String urls = Constants.CLIENT + identifierField.getText().trim();
 
         String productsJSON = null;
         try {
