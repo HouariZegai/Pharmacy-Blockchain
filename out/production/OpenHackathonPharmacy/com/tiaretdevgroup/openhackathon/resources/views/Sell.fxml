@@ -40,23 +40,31 @@
                         <Insets top="16.0" />
                      </opaqueInsets>
                   </JFXButton>
+                  <AnchorPane prefHeight="240.0" prefWidth="350.0">
+                     <children>
+                        <ImageView fitHeight="116.0" fitWidth="113.0" layoutX="106.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/sell/pill-bottle.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
                <padding>
                   <Insets left="20.0" top="20.0" />
                </padding>
             </VBox>
-            <AnchorPane>
-               <HBox.margin>
-                  <Insets top="90.0" />
-               </HBox.margin>
+            <AnchorPane prefHeight="650.0" prefWidth="471.0">
                <children>
-                  <ImageView fitHeight="382.0" fitWidth="423.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="451.0" fitWidth="471.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/sell/PharmacySell.png" />
                      </image>
                   </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
+            
          </children>
       </HBox>
       <HBox fx:id="sellProductPane" spacing="80.0" visible="false">

@@ -1,12 +1,12 @@
 package com.tiaretdevgroup.openhackathon.java.main;
 
-import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain;
-import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain;
 import blockchain.factory.BlockchainFactory;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.MaladyBlockChain;
+import com.tiaretdevgroup.openhackathon.java.blockchain.chains.SalesBlockChain;
 import com.tiaretdevgroup.openhackathon.java.utils.Constants;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -49,12 +49,10 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/tiaretdevgroup/openhackathon/resources/views/System.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource    ("/com/tiaretdevgroup/openhackathon/resources/views/Authontification.fxml"));
 
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
-
         stage.show();
     }
 }

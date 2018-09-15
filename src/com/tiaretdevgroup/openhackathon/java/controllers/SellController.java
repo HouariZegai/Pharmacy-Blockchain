@@ -68,10 +68,6 @@ public class SellController implements Initializable {
     @FXML
     public void onCheck() {
 
-        if (identifierField.getText() == null || !identifierField.getText().matches("[0-9]")) {
-            toastErrorMsgCheckPane.show("Identifier not valid !", 2000);
-            return;
-        }
 
         MaladyBlockChain maladyBlockChain = BlockchainFactory.INSTANCE.
                 readMaladyBlockChainFromJSONFile();
@@ -178,7 +174,6 @@ public class SellController implements Initializable {
         } catch (UnirestException e) {
             e.printStackTrace();
         }
-
         JSONObject obj = new JSONObject(productsJSON);
         identifierLbl.setText(obj.getString("identifier"));
         firstNameLbl.setText(obj.getString("firstname"));

@@ -59,7 +59,7 @@ class MaladyBlockChain(data: MutableList<MaladyBlock> = mutableListOf())
                 model.idMalady,
                 model.maladyValue.value,
                 nonce, Date().time, lastBLock.hash)
-        blockChain.add(newBlock)
+        //blockChain.add(newBlock)
         return newBlock
     }
 

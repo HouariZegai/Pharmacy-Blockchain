@@ -7,6 +7,7 @@ import blockchain.chains.BlockChain
 import blockchain.factory.BlockchainFactory
 import blockchain.factory.BlockchainPeersFactory
 import blockchain.models.Sale
+import blockchain.workers.NotifyPeers
 import com.tiaretdevgroup.openhackathon.java.utils.Constants
 import org.json.JSONObject
 import utils.HashUtils
@@ -32,7 +33,7 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
 
     fun addBlock(idPatient: String, idProduct: String, idPharmacy: String) {
         val block = this.mineBlock(blockchain.models.Sale(idPatient, idProduct, idPharmacy))
-        //NotifyPeers(block).start()
+        NotifyPeers(block).start()
     }
 
     /**
@@ -64,7 +65,7 @@ class SalesBlockChain(data: MutableList<SaleBlock> = mutableListOf())
                 model.productId,
                 model.pharmacyId,
                 nonce, Date().time, lastBLock.hash)
-        blockChain.add(newBlock)
+        //blockChain.add(newBlock)
 
         return newBlock
     }

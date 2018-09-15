@@ -17,6 +17,7 @@ object NetworkUtils {
         val array = JSONArray(data.body.toString())
         val node = mutableListOf<String>()
         for (i in 0 until (array.length())) {
+
             node.add(array.getString(i))
         }
         return node.toTypedArray()
