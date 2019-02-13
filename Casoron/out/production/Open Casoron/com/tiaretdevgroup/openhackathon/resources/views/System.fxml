@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" prefHeight="600.0" prefWidth="1130.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tiaretdevgroup.openhackathon.java.controllers.SystemController">
+   <children>
+      <AnchorPane fx:id="choosePane" prefWidth="1186.0">
+         <children>
+            <Label layoutX="502.0" layoutY="21.0" prefHeight="51.0" prefWidth="209.0" text="CASORON">
+               <font>
+                  <Font name="Tahoma" size="34.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="title-header" />
+                  <String fx:value="title" />
+               </styleClass>
+            </Label>
+            <AnchorPane layoutX="141.0" layoutY="95.0" prefHeight="480.0" prefWidth="420.0" styleClass="box-chooser" AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="95.0">
+               <children>
+                  <ImageView fitHeight="470.0" fitWidth="420.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trac/eachStudent.png" />
+                     </image>
+                  </ImageView>
+                  <Pane opacity="0.82" prefHeight="480.0" prefWidth="420.0" style="-fx-background-color: #148BB1;" styleClass="pane-chooser">
+                     <children>
+                        <Label layoutX="70.0" layoutY="158.0" prefHeight="151.0" prefWidth="301.0" styleClass="content-chooser" text="This section shows how to add  maladies and consult it" wrapText="true" />
+                     </children>
+                  </Pane>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="90.0" prefHeight="66.0" prefWidth="356.0" styleClass="title-chooser" text="  DISEASES MANAGEMENT" />
+                  <JFXButton layoutX="85.0" layoutY="349.0" onAction="#onDiseases" prefHeight="57.0" prefWidth="264.0" styleClass="btn-chooser" text="SHOW DISEASES " />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="616.0" layoutY="95.0" prefHeight="480.0" prefWidth="420.0" styleClass="box-chooser" AnchorPane.leftAnchor="616.0" AnchorPane.topAnchor="95.0">
+               <children>
+                  <ImageView fitHeight="440.0" fitWidth="420.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/trac/allStudent.png" />
+                     </image>
+                  </ImageView>
+                  <Pane opacity="0.82" prefHeight="480.0" prefWidth="420.0" style="-fx-background-color: #694A97;" styleClass="pane-chooser" />
+                  <JFXButton layoutX="86.0" layoutY="348.0" onAction="#onSale" prefHeight="57.0" prefWidth="264.0" styleClass="btn-chooser" text="SHOW SALE" />
+                  <Label layoutX="182.0" layoutY="84.0" prefHeight="66.0" prefWidth="197.0" styleClass="title-chooser" text="SALE" />
+                  <Label layoutX="70.0" layoutY="165.0" prefHeight="151.0" prefWidth="301.0" styleClass="content-chooser" text="This section shows follow-up activities for all students during the applied lesson" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <VBox fx:id="salePane" prefWidth="1150.0" spacing="10.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <Label onMouseClicked="#goToMain" prefHeight="50.0" style="-fx-font-size: 23px;" text="Casoron">
+                     <font>
+                        <Font name="Tahoma" size="34.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="title-header" />
+                        <String fx:value="lbl-menu" />
+                        <String fx:value="lbl-link" />
+                     </styleClass>
+                  </Label>
+                  <Label prefHeight="50.0" style="-fx-font-size: 23px;" text="&gt; Sale">
+                     <font>
+                        <Font name="Tahoma" size="34.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="title-header" />
+                        <String fx:value="lbl-menu" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="500.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <Label styleClass="lbl-coming-soon" text="Coming Soon !" />
+                        <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Preloader.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" top="20.0" />
+         </padding>
+         <StackPane.margin>
+            <Insets right="10.0" />
+         </StackPane.margin>
+      </VBox>
+      <HBox fx:id="diseasesPane" prefWidth="1120.0" stylesheets="@../css/management.css" visible="false">
+         <children>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" spacing="5.0">
+                     <children>
+                        <Label onMouseClicked="#goToMain" prefHeight="50.0" style="-fx-font-size: 23px;" text="Casoron">
+                           <font>
+                              <Font name="Tahoma" size="34.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="lbl-menu" />
+                              <String fx:value="lbl-link" />
+                           </styleClass>
+                        </Label>
+                        <Label prefHeight="50.0" style="-fx-font-size: 23px;" styleClass="lbl-menu" text="&gt; Diseases">
+                           <font>
+                              <Font name="Tahoma" size="34.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <JFXTreeTableView fx:id="tableDiseases" prefHeight="535.0" prefWidth="800.0" />
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+            <HBox HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="rightPane" prefWidth="300.0" spacing="10.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <JFXTextField fx:id="fieldSearch" labelFloat="true" prefWidth="170.0" promptText="Search" styleClass="field" />
+                              <JFXComboBox fx:id="comboSearch" labelFloat="true" promptText="Search By" styleClass="field" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <JFXButton onAction="#onAdd" styleClass="btn" text="ADD" />
+                              <JFXButton onAction="#onDelete" style="-fx-background-color: #03b372;" styleClass="btn" text="DELETE" />
+                              <JFXButton onAction="#onClear" style="-fx-background-color: #283869;" styleClass="btn" text="CLEAR" />
+                           </children>
+                        </HBox>
+                        <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0" spacing="15.0" styleClass="right-pane">
+                           <children>
+                              <Label styleClass="title" text="PERSONAL INFORMATION PANE" />
+                              <VBox prefWidth="260.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="fieldIdentifier" labelFloat="true" promptText="IDENTIFIER" styleClass="field" />
+                                    <JFXTextField fx:id="fieldFirstName" labelFloat="true" promptText="FIRST NAME" styleClass="field" />
+                                    <JFXTextField fx:id="fieldLastName" labelFloat="true" promptText="LAST NAME" styleClass="field" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" styleClass="right-pane">
+                           <children>
+                              <Label styleClass="title" text="MALADIES PANE" />
+                              <JFXToggleButton fx:id="toggleSelectAll" text="Select All">
+                                 <padding>
+                                    <Insets left="-5.0" />
+                                 </padding>
+                              </JFXToggleButton>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <JFXCheckBox fx:id="checkMaladies1" />
+                                    <JFXCheckBox fx:id="checkMaladies2" />
+                                    <JFXCheckBox fx:id="checkMaladies3" />
+                                    <JFXCheckBox fx:id="checkMaladies4" />
+                                    <JFXCheckBox fx:id="checkMaladies5" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/system.css" />
+      <URL value="@../css/trac.css" />
+   </stylesheets>
+</StackPane>
